@@ -1,0 +1,27 @@
+<div class="createAccountPage">
+
+
+      <div class="form-vertical">
+        {% form 'create_customer' %}
+
+          <h1 class="text-center">{{ 'customer.register.title' | t }}</h1>
+
+          {%- if form.errors -%}
+            <div class="form-message form-message--error">
+              {{ form.errors | default_errors }}
+            </div>
+          {%- endif -%}
+
+          <input class="createTextInput" placeholder="First Name" type="text" name="customer[first_name]" id="FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autofocus>
+
+          <input class="createTextInput" placeholder="Last Name" type="text" name="customer[last_name]" id="LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+
+          <input class="createTextInput" placeholder="Email" type="email" name="customer[email]" id="Email" class="{% if form.errors contains 'email' %} input--error{% endif %}" {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+
+          <input class="createTextInput" placeholder="Password" type="password" name="customer[password]" id="CreatePassword" class="{% if form.errors contains 'password' %} input--error{% endif %}">
+
+          <input class="createSubmit" type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
+
+        {% endform %}
+      </div>
+</div>

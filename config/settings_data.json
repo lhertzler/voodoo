@@ -1,0 +1,735 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#69727b",
+    "color_sale_text": "#557b97",
+    "color_button": "#557b97",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#949494",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "work_sans_n4",
+    "type_base_size": 16,
+    "type_bold_product_titles": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_pinterest_link": "",
+    "social_instagram_link": "",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/skullGreen.png",
+    "checkout_header_image": "shopify:\/\/shop_images\/banner_b3d25dfc-e9e9-4600-974c-4186d0129ed8.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/logo.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "shopify:\/\/shop_images\/dark_wall_f008e3c8-2a45-4a98-99a4-73459fa97eb0.png",
+    "checkout_body_background_color": "#000000",
+    "checkout_input_background_color_mode": "transparent",
+    "checkout_sidebar_background_image": "shopify:\/\/shop_images\/dark_wall_f008e3c8-2a45-4a98-99a4-73459fa97eb0.png",
+    "checkout_sidebar_background_color": "#1e1e1e",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#bfd730",
+    "checkout_button_color": "#bfd730",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "shippingPrice": "35",
+          "logo": "shopify:\/\/shop_images\/logo.png",
+          "locatorLink": "",
+          "locatorIcon": "shopify:\/\/shop_images\/pin.png",
+          "cartIcon": "shopify:\/\/shop_images\/cart.png",
+          "emptyImg": "shopify:\/\/shop_images\/dropImg.png",
+          "dropImgBkg": "shopify:\/\/shop_images\/dropImg.png",
+          "productLink": "\/collections\/all",
+          "storeLink": "",
+          "eventsLink": "shopify:\/\/pages\/events",
+          "blogLink": "",
+          "sponsorshipLink": "shopify:\/\/pages\/join-the-tribe",
+          "aboutLink": "shopify:\/\/pages\/about-us",
+          "phoneNumber": "800-237-7560",
+          "email": "info@voodooride.com",
+          "instagramUrl": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+          "faceBookUrl": "https:\/\/www.facebook.com\/voodooride\/",
+          "twitterUrl": "https:\/\/twitter.com\/voodooride?lang=en",
+          "youtubeUrl": "https:\/\/www.youtube.com\/channel\/UCOWKics4pE1ZHw8efYzNLTw"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "",
+          "alignment": "center",
+          "title": "Image with text overlay",
+          "text": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.<\/p>",
+          "hero_size": "medium",
+          "text_size": "large",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "top",
+              "title": "Image slide",
+              "subheading": "Tell your brand's story through video and images",
+              "link": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "",
+              "alignment": "top",
+              "title": "Image slide",
+              "subheading": "Tell your brand's story through video and images",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1"
+        ],
+        "settings": {
+          "autoplay": true,
+          "autoplay_speed": 7,
+          "slideshow_height": "small",
+          "text_size": "medium"
+        }
+      },
+      "featured-collections": {
+        "type": "collection",
+        "settings": {
+          "title": "Featured collection",
+          "collection": "",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "image": "",
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "followSkull": "shopify:\/\/shop_images\/followSkull2.png",
+          "background": "shopify:\/\/shop_images\/dark_wall_f008e3c8-2a45-4a98-99a4-73459fa97eb0.png",
+          "signupHead": "Stay In the Know",
+          "signupBody": "Sign up for our newsletter to get the latest news, updates, special offers and more delivered directly to your inbox!",
+          "instagramUrl": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+          "faceBookUrl": "https:\/\/www.facebook.com\/voodooride\/",
+          "twitterUrl": "https:\/\/twitter.com\/voodooride?lang=en",
+          "youtubeUrl": "https:\/\/www.youtube.com\/channel\/UCOWKics4pE1ZHw8efYzNLTw",
+          "privacyNotice": "shopify:\/\/pages\/privacy-policy",
+          "termsAndConditions": "shopify:\/\/pages\/privacy-policy"
+        }
+      },
+      "loadingCover": {
+        "type": "loadingCover",
+        "settings": {}
+      },
+      "videoHero": {
+        "type": "videoHero",
+        "settings": {
+          "superTitle": "Voodoo Summer Blast 2018",
+          "title": "Tribe member ryan litteral",
+          "stickerText": "Intenst car care products. May cause jealousy and envy. For best results, use in full view of your arch enemy. Please dispose of inferior car care products responsibly."
+        }
+      },
+      "featured": {
+        "type": "featured",
+        "settings": {
+          "backgroundImage": "shopify:\/\/shop_images\/grunge1.png",
+          "featuredTitle": "Featured",
+          "bestSeller": "all-surface-detailer",
+          "featuredProd1": "streak-free-glass-cleaner",
+          "featuredProd2": "3-in-1-polish",
+          "allProdLink": ""
+        }
+      },
+      "homeBody": {
+        "type": "homeBody",
+        "blocks": {
+          "1539638540927": {
+            "type": "slide",
+            "settings": {
+              "link": "",
+              "img": "shopify:\/\/shop_images\/firstSlide.jpg",
+              "title": "Videos"
+            }
+          },
+          "1539638670811": {
+            "type": "slide",
+            "settings": {
+              "link": "",
+              "img": "shopify:\/\/shop_images\/tips.jpg",
+              "title": "Tips & Rituals"
+            }
+          },
+          "1539638765323": {
+            "type": "slide",
+            "settings": {
+              "link": "",
+              "img": "shopify:\/\/shop_images\/events.jpg",
+              "title": "Events"
+            }
+          },
+          "1539638776100": {
+            "type": "slide",
+            "settings": {
+              "link": "",
+              "img": "shopify:\/\/shop_images\/lifestyle.jpg",
+              "title": "Lifestyle"
+            }
+          },
+          "1539638899829": {
+            "type": "slide",
+            "settings": {
+              "link": "",
+              "img": "shopify:\/\/shop_images\/guest.jpg",
+              "title": "Guest Articles"
+            }
+          }
+        },
+        "block_order": [
+          "1539638540927",
+          "1539638670811",
+          "1539638765323",
+          "1539638776100",
+          "1539638899829"
+        ],
+        "settings": {
+          "bubbles": "shopify:\/\/shop_images\/bubbles.png",
+          "followSkull": "shopify:\/\/shop_images\/followSkull1.png",
+          "arrow": "shopify:\/\/shop_images\/arrow.png",
+          "superTitle": "About Us",
+          "title": "We are the<br>voodoo ride tribe",
+          "body": "<p>We are a worldwide collective of car detail and cleaning freaks who get a rush from seeing dripping foam and suds on our toys. Whether it's a car, truck, or motorcycle, we're obsessively passionate about keeping them looking fresh and clean. Voodoo Ride is much more than a car care and detailing brand. We are a way of thinking. We are a lifestyle. We strive to be the best at what we do.<\/p>\n<p>Offering auto detailing products which work is a given. Voodoo Ride is devoted to developing car cleaning products that are easy to use and have unique features that simplifies the auto detailing process. We only produce car detailing products that we would personally use. For some, cleaning their vehicles is a dreadful chore, but for us it's the opposite. There is nothing more gratifying than transforming a dirty vehicle into a glistening work of mechanical beauty.<\/p>",
+          "buttonLink": "\/pages\/join-the-tribe",
+          "buttonText": "Join The Tribe"
+        }
+      },
+      "homeFooter": {
+        "type": "homeFooter",
+        "settings": {
+          "followSkull": "shopify:\/\/shop_images\/followSkull2.png",
+          "background": "shopify:\/\/shop_images\/grunge.png",
+          "signupHead": "Stay in the know",
+          "signupBody": "Sign up for our newsletter to get the latest news, updates, special offers and more delivered directly to your inbox!",
+          "instagramUrl": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+          "faceBookUrl": "https:\/\/www.facebook.com\/voodooride\/",
+          "twitterUrl": "https:\/\/twitter.com\/voodooride?lang=en",
+          "youtubeUrl": "https:\/\/www.youtube.com\/channel\/UCOWKics4pE1ZHw8efYzNLTw",
+          "privacyNotice": "shopify:\/\/pages\/privacy-policy",
+          "termsAndConditions": "shopify:\/\/pages\/privacy-policy"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": 100,
+          "header": "Coming Soon"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_form_subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Notify me"
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {
+          "show_share_buttons": false,
+          "social_message": "test test test"
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 2,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": true,
+          "tags_enable": true
+        }
+      },
+      "sleepCollection": {
+        "type": "sleepCollection",
+        "settings": {
+          "bannerBackground": "shopify:\/\/shop_images\/banner.jpg",
+          "title": "The Voodoo family of products",
+          "blockLink": "",
+          "blockBackground": "shopify:\/\/shop_images\/car_image.jpg",
+          "blockText": "Tips & Car Care Rituals"
+        }
+      },
+      "aboutPage": {
+        "type": "aboutPage",
+        "blocks": {
+          "1540942872777": {
+            "type": "quote",
+            "settings": {
+              "description": "I cant say enough about Voodoo products! My husband and I run a Mobile Detailing business, and trust me when I say we have tried tons of different products!! Nothing compares and we definitely wont be switching any time soon. I highly recommend!",
+              "date": "09\/12\/2018",
+              "name": "Rosa F."
+            }
+          },
+          "1540943032338": {
+            "type": "quote",
+            "settings": {
+              "description": "Best product",
+              "date": "10\/17\/2018",
+              "name": "Lucas R."
+            }
+          },
+          "1540943127244": {
+            "type": "quote",
+            "settings": {
+              "description": "To start off they have Great customer service and they also have Great products. A great company to support in my eyes. Thanks for all the great products",
+              "date": "05\/05\/2018",
+              "name": "Mike Z."
+            }
+          },
+          "1540943190551": {
+            "type": "quote",
+            "settings": {
+              "description": "This product works very well on my black car and black wheels. The tire dressing is perfect for the low pros and the detail spray gives a nice clean shine to the paint and my interior. I normally use other products, but I’ll definit be switching products to Voodoo Ride!",
+              "date": "03\/26\/2018",
+              "name": "Breanna S."
+            }
+          }
+        },
+        "block_order": [
+          "1540942872777",
+          "1540943032338",
+          "1540943127244",
+          "1540943190551"
+        ],
+        "settings": {
+          "bannerImg": "shopify:\/\/shop_images\/banner_b3d25dfc-e9e9-4600-974c-4186d0129ed8.jpg",
+          "title": "We are voodoo ride",
+          "leftImg": "shopify:\/\/shop_images\/bucket.jpg",
+          "rightSideTitle": "We are a worldwide collective of car detail and cleaning freaks who get a rush from seeing dripping foam and suds on our toys.",
+          "rightSideBody": "Whether it's a car, truck, or motorcycle, we're obsessively passionate about keeping them looking fresh and clean. Voodoo Ride is much more than a car care and detailing brand. We are a way of thinking. We are a lifestyle. We strive to be the best at what we do.<br><br>Offering auto detailing products which work is a given. Voodoo Ride is devoted to developing car cleaning products that are easy to use and have unique features that simplifies the auto detailing process. We only produce car detailing products that we would personally use. For some, cleaning their vehicles is a dreadful chore, but for us it's the opposite. There is nothing more gratifying than transforming a dirty vehicle into a glistening work of mechanical beauty.<br><br>We know that there are many options available for car care and detailing. We encourage each of you to do your own research. Try out different products on the market and compare them to Voodoo Ride. We are confident that you'll love the quality and simplicity of use that Voodoo Ride has to offer.",
+          "youtubeIframe": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/fXEc7Ypy4h8\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>",
+          "phoneNumber": "800-237-7560",
+          "email": "info@voodooride.com",
+          "addressLine1": "13000 Temple Avenue",
+          "addressLine2": "City of Industry, CA 91746",
+          "hours": "Mon.-Fri. 8:30am - 5:30pm",
+          "instagram": "",
+          "facebook": "",
+          "twitter": "",
+          "youtube": ""
+        }
+      },
+      "thanks": {
+        "type": "thanks",
+        "settings": {
+          "subhead": "We've received your information, and you'll be hearing from us shortly.",
+          "body": "Until then, be sure to follow us on <a href=\"https:\/\/www.facebook.com\/voodooride\/\">Facebook<\/a> & <a href=\"https:\/\/www.instagram.com\/voodooride\/\">Instagram<\/a> to keep up with the latest from the Voodoo Tribe."
+        }
+      },
+      "legal": {
+        "type": "legal",
+        "settings": {
+          "bannerImg": "shopify:\/\/shop_images\/banner_b04755b1-8628-4360-be77-a20b19a9e9e3.jpg"
+        }
+      },
+      "events": {
+        "type": "events",
+        "settings": {
+          "bannerImg": "shopify:\/\/shop_images\/hero.jpg",
+          "title": "Upcoming Events"
+        }
+      },
+      "tribe": {
+        "type": "tribe",
+        "blocks": {
+          "1541525695698": {
+            "type": "tribesmen",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/member1.jpg",
+              "name": "Domini Toretto",
+              "yearJoined": "2017",
+              "homeTown": "Los Angeles",
+              "instagramLink": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+              "instagramName": "Dominictoretto"
+            }
+          },
+          "1541525937884": {
+            "type": "tribesmen",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/member2.jpg",
+              "name": "John Smith",
+              "yearJoined": "2017",
+              "homeTown": "San Diego",
+              "instagramLink": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+              "instagramName": "Johnsmithdrives"
+            }
+          },
+          "1541526056258": {
+            "type": "tribesmen",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/member3.jpg",
+              "name": "Baby Driver",
+              "yearJoined": "2017",
+              "homeTown": "Atlanta",
+              "instagramLink": "https:\/\/www.instagram.com\/voodooride\/?hl=en",
+              "instagramName": "Babydriver"
+            }
+          }
+        },
+        "block_order": [
+          "1541525695698",
+          "1541525937884",
+          "1541526056258"
+        ],
+        "settings": {
+          "bannerImg": "shopify:\/\/shop_images\/header.jpg",
+          "title": "Join The Tribe",
+          "iframeCode": "<iframe width=\"560\" height=\"315\" src=\"https:\/\/www.youtube.com\/embed\/-IJsFkKKZyw\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen=\"\"><\/iframe>",
+          "topBlockTitle": "How Do I Become A Tribe Member?",
+          "topBlockBody": "FIrst of all, a big THANK YOU to all for your support and interest in Voodoo Ride.<strong>What is the Voodoo Ride Tribe?<\/strong>The Voodoo Ride Tribe is a dedicated group of enthusiasts that shares the same passion for keeping their vehicles clean and looking fresh. They promote Voodoo Ride by demonstrating and shareing how easy to use and awesome the products are. All Tribe members carry themselves with the highest character. You will understand once initiated.<strong>Do I have what it takes to be a Tribe member?<\/strong>So many of you have reached out to us and asked this question. Voodoo Ride Tribe members push the growth of the brand by spreading the word at events or through social media. Without being told what to do, they earnestly do it on their own accord not because we ask them to but because they believe in the brand.",
+          "requirementsTitle": "Sponsorship Requirements",
+          "requirementsBody": "<strong>*** Before you apply to join, please look at the requirements below***<\/strong><ul>\n<li>Active on social media - Non-private Instagram account with at least 1K followers<\/li>\n<li>Actual user of Voodoo Ride products<\/li>\n<li>Actively attends car shows - show evidence of past events attended (photos)<\/li>\n<li>Submit vehicle description with list of modifications<\/li>\n<li>Submit at least 3 clear photos of your vehicle<\/li>\n<li>Must be comfortable with placing Voodoo Ride decals on your vehicle<\/li>\n<li>Submit brief description about yourself<\/li>\n<li>Answer the following questions:<\/li>\n<ul>\n<li>Why do you want to be a Tribe member<\/li>\n<li>How do you plan on promoting our brand?<\/li>\n<\/ul>\n<\/ul><strong>Please prepare the information containing all the above requirements and submit it for review. If your application is missing any of the requirements then your application will be automatically rejected.<\/strong>",
+          "requirementImg": "shopify:\/\/shop_images\/Group.jpg"
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "featured-collections",
+      "feature-row",
+      "slideshow"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162951",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "logo": ""
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "autoplay": true,
+            "autoplay_speed": 6,
+            "slideshow_height": "medium",
+            "text_size": "medium"
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

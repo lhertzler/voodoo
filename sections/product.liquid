@@ -1,0 +1,401 @@
+<div class="productPageContainer">
+  <div class="banner">
+    {% if product.metafields["global"]["banner"] %}
+    	<img src="{{ product.metafields["global"]["banner"] }}">
+    {% else %}
+    	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/t/2/assets/banner1-1540572314694.jpg?18135746564462884298">
+    {% endif %}
+  </div>
+  <div class="vertTitleContainer">
+    <span>
+      {{ product.metafields["global"]["side-title"] }} —
+    </span>
+  </div>
+  <div class="topProdSection">
+    <div class="prodImg">
+      <img src="{{ product.featured_image | img_url: '520x' }}">
+    </div>
+    <div class="righthand">
+      <div class="line"></div>
+      <div class="breadCrumb">
+        <a href="/">Home</a><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/arrow2.png?5675951094142806782"><span>Products</span>
+      </div>
+      <div class="title">
+        {{ product.title }}
+      </div>
+      <div class="priceRow">
+        <span class="price">
+          ${{ product.price | money_without_currency }}
+        </span>
+        <span class="barCode">
+          {{ product.variants[0].barcode }}
+        </span>
+      </div>
+      <div class="buyRow">
+        <div class="quantitySelector">
+          <div class="minusButton">
+            -
+          </div>
+          <input class="quantityNum" type="number" min="1" value="1">
+          <div class="plusButton">
+            +
+          </div>
+        </div>
+        <div class="buyButton" data-ID="{{ product.variants[0].id }}" data-quant="1">
+          <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+          <span>
+            Add To Cart
+          </span>
+        </div>
+      </div>
+      <a class="storeFinder" href="">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/pin.png?14809530229444470617">
+        <span>Find in Stores</span>
+      </a>
+      <div class="weight">
+        {% assign gram = product.variants[0].weight_in_unit %}
+        {% assign grams = gram | split: '.' %}
+        NET WT. {{ grams[0] }} OZ. ({{ product.variants[0].weight }} GRAMS)
+      </div>
+      <div class="desc">
+        {% assign desc = product.description | split: '—' %}
+        {{ desc[1] }}
+      </div>
+      <a href="#lower">
+        Learn and read more <span>▼</span>
+      </a>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="left">
+      <div class="row">
+        <div class="text">
+          Durability
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["durability-rating"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text">
+          Gloss/Shine
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["glossy-rating"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text">
+          Hydrophobic Beading
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["hydrophobic-rating"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="row">
+        <div class="text">
+          Hardness
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["hardness-rating"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text">
+          Protection
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["protection-rating"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="text">
+          Ease of Use
+        </div>
+        <div class="line"></div>
+        <div class="starContainer">
+          <div class="greyStars">
+            {% for i in (1..5) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGrey.png?16351278415169169043">
+            {% endfor %}
+          </div>
+          <div class="greenStars">
+            {% assign durability = product.metafields["global"]["ease-of-use"] %}
+            {% for i in (1..durability) %}
+            	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/skullGreen.png?16351278415169169043">
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="productSlideShow">
+    {% if product.metafields["global"]["slide-image-1"] %}
+      <img src="{{ product.metafields["global"]["slide-image-1"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-2"] %}
+      <img src="{{ product.metafields["global"]["slide-image-2"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-3"] %}
+      <img src="{{ product.metafields["global"]["slide-image-3"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-4"] %}
+      <img src="{{ product.metafields["global"]["slide-image-4"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-5"] %}
+      <img src="{{ product.metafields["global"]["slide-image-5"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-6"] %}
+      <img src="{{ product.metafields["global"]["slide-image-6"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-7"] %}
+      <img src="{{ product.metafields["global"]["slide-image-7"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-1"] %}
+      <img src="{{ product.metafields["global"]["slide-image-1"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-2"] %}
+      <img src="{{ product.metafields["global"]["slide-image-2"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-3"] %}
+      <img src="{{ product.metafields["global"]["slide-image-3"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-4"] %}
+      <img src="{{ product.metafields["global"]["slide-image-4"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-5"] %}
+      <img src="{{ product.metafields["global"]["slide-image-5"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-6"] %}
+      <img src="{{ product.metafields["global"]["slide-image-6"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-7"] %}
+      <img src="{{ product.metafields["global"]["slide-image-7"] }}">
+    {% endif %}
+  </div>
+  <div class="productSlideShowMob">
+    {% if product.metafields["global"]["slide-image-1"] %}
+      <img src="{{ product.metafields["global"]["slide-image-1"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-2"] %}
+      <img src="{{ product.metafields["global"]["slide-image-2"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-3"] %}
+      <img src="{{ product.metafields["global"]["slide-image-3"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-4"] %}
+      <img src="{{ product.metafields["global"]["slide-image-4"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-5"] %}
+      <img src="{{ product.metafields["global"]["slide-image-5"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-6"] %}
+      <img src="{{ product.metafields["global"]["slide-image-6"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-7"] %}
+      <img src="{{ product.metafields["global"]["slide-image-7"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-1"] %}
+      <img src="{{ product.metafields["global"]["slide-image-1"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-2"] %}
+      <img src="{{ product.metafields["global"]["slide-image-2"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-3"] %}
+      <img src="{{ product.metafields["global"]["slide-image-3"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-4"] %}
+      <img src="{{ product.metafields["global"]["slide-image-4"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-5"] %}
+      <img src="{{ product.metafields["global"]["slide-image-5"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-6"] %}
+      <img src="{{ product.metafields["global"]["slide-image-6"] }}">
+    {% endif %}
+    {% if product.metafields["global"]["slide-image-7"] %}
+      <img src="{{ product.metafields["global"]["slide-image-7"] }}">
+    {% endif %}
+  </div>
+  <div id="lower" class="tabs">
+    <div id="videosTab" class="tab">
+      Videos
+    </div>
+    <div id="detailsTab" class="tab active">
+      Details
+    </div>
+    <div id="reviewsTab" class="tab">
+      Reviews
+    </div>
+    <div id="faqTab" class="tab">
+      Faq
+    </div>
+  </div>
+  <div class="contentContainer">
+    <div class="videos" style="display:none;">
+      {% assign videos = product.metafields["global"]["videos"] | split: '***' %}
+      {% assign videosSize = videos | size %}
+      {% assign videosSize = videosSize | minus: 1 %}
+      {% for videoIndex in (0..videosSize) %}
+      	{% if videoIndex != 0 %}
+      		<div class="responsiveIframeContainer">
+              {{ videos[videoIndex] | replace: '<p>', '' | replace: '</p>', '' | replace: '&nbsp;', '' | replace: '&lt;', '<' | replace: '&gt;', '>'}}
+      		</div>
+      	{% endif %}
+      {% endfor %}
+    </div>
+    <div class="details">
+      {{ product.metafields["global"]["details"] | replace: '<p>', '' | replace: '</p>', '' | replace: '<div>', '<div data-aos="fade-right">' | replace: '<span>', '<span data-aos="fade-right">' }}
+    </div>
+    <div class="reviews" style="display:none;">
+      {% include 'product-reviews' %}
+    </div>
+    <div class="faq" style="display:none;">
+      {{ product.metafields["global"]["faq"] }}
+    </div>
+  </div>
+  <div class="otherItems">
+    <div class="title">
+      You may also be interested in
+    </div>
+    <div class="flex">
+      {% assign totalCount = 0 %}
+  
+      {% for product in collections['car-care'].products %}
+      {% assign totalCount = totalCount | plus: 1 %}
+      {% endfor %}
+      
+      {% assign _product = collections['car-care'].products %}
+      
+      <script>
+        var product = [];
+        {% for i in (0..totalCount) %}
+        product[{{ i }}] = {
+          url:"{{ _product[i].url }}",
+          image:"{{ _product[i].featured_image | img_url: '600x' }}",
+          price:"{{ _product[i].price | money_without_currency }}",
+          barcode:"{{ _product[i].variants[0].barcode }}",
+          title:"{{ _product[i].title }}"
+        };
+        {% endfor %}
+        product.splice(-1,1);
+        
+        console.log(product);
+        
+        var randomStart = Math.random() * ({{ totalCount }});
+        var wholeNum = Math.floor(randomStart);
+        
+        var prod0 = wholeNum;
+        if (product[prod0].title === '{{ product.title }}'){
+          prod0++;
+        }
+        console.log(product[prod0]);
+        console.log(prod0);
+            
+        var prod1 = prod0 + 1;
+        if (prod1 > {{ totalCount }}-1){
+          prod1 -= {{ totalCount }};
+        }
+        if (product[prod1].title === '{{ product.title }}'){
+          prod1 ++;
+        }
+        console.log(product[prod1]);
+        console.log(prod1);
+            
+        var prod2 = prod1 + 1;
+        if (prod2 > {{ totalCount }}-1){
+          prod2 -= {{ totalCount }};
+        }
+        if (product[prod2].title === '{{ product.title }}'){
+          prod2 ++;
+        }
+        console.log(product[prod2]);
+        console.log(prod2);
+            
+        var prod3 = prod2 + 1;
+        if (prod3 > {{ totalCount }}-1){
+          prod3 -= {{ totalCount }};
+        }
+        if (product[prod3].title === '{{ product.title }}'){
+          prod3 ++;
+        }
+        console.log(product[prod3]);
+        console.log(prod3);
+
+        document.write('<a class="block" href="' + product[prod0].url + '"><img src="' + product[prod0].image + '"><span class="bar"><span class="price">$' + product[prod0].price + '</span><span class="innerbar">' + product[prod0].barcode + '</span></span><span class="title">' + product[prod0].title + '</span><div class="button"><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782"><span>Add to cart</span></div></a>');
+        document.write('<a class="block" href="' + product[prod1].url + '"><img src="' + product[prod1].image + '"><span class="bar"><span class="price">$' + product[prod1].price + '</span><span class="innerbar">' + product[prod1].barcode + '</span></span><span class="title">' + product[prod1].title + '</span><div class="button"><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782"><span>Add to cart</span></div></a>');
+        document.write('<a class="block" href="' + product[prod2].url + '"><img src="' + product[prod2].image + '"><span class="bar"><span class="price">$' + product[prod2].price + '</span><span class="innerbar">' + product[prod2].barcode + '</span></span><span class="title">' + product[prod2].title + '</span><div class="button"><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782"><span>Add to cart</span></div></a>');
+        document.write('<a class="block" href="' + product[prod3].url + '"><img src="' + product[prod3].image + '"><span class="bar"><span class="price">$' + product[prod3].price + '</span><span class="innerbar">' + product[prod3].barcode + '</span></span><span class="title">' + product[prod3].title + '</span><div class="button"><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782"><span>Add to cart</span></div></a>');
+
+      </script>
+    </div>
+    <div class="underLink">
+    	<a href="/collections/all">View all voodoo ride products →</a>
+    </div>
+  </div>
+</div>
+<div class="modalOVerlay" style="display:none;">
+  <div class="exitModal">
+    ×
+  </div>
+</div>
+<div class="imageModal" style="display:none;">
+  <img src="">
+</div>

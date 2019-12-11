@@ -1,0 +1,66 @@
+{% schema %}
+{
+ "name": "Section Name",
+ "settings": [
+   {
+     "id": "bannerImg",
+     "type": "image_picker",
+     "label": "bannerImg"
+   },
+   {
+     "id": "title",
+     "type": "text",
+     "label": "title"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="eventsPage">
+  <div class="banner">
+    <img src="{{ section.settings.bannerImg | img_url: '1600x' }}">
+    <div class="text">
+      <div class="line"></div>
+      <div class="breadCrumb">
+        <a href="/">Home</a><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/arrow2.png?5675951094142806782"><span>Events</span>
+      </div>
+      <h1>{{ section.settings.title }}</h1>
+    </div>
+  </div>
+  <div class="bodyArea">
+    <img class="floater" src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/bunny.png?1093261143234107080">
+    <div class="inner">
+      {% assign events = blogs.Events %}
+      {% for event in events.articles %}
+      	<a class="blockContainer" href="{{ event.metafields["global"]["Event-Url"] }}">
+          <span class="day">
+            {{ event.metafields["global"]["Event-day-of-the-week"] }}
+          </span>
+          <span class="date">
+            {{ event.metafields["global"]["Event-date"] }}
+          </span>
+          <span class="block">
+            <img src="{{ event.image | img_url:'640x' }}" class="bigImg">
+            <span class="eventTitle">
+              {{ event.title }}
+            </span>
+            <span class="eventRow">
+              <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/time.png?13412379145347209286"><span>{{ event.metafields["global"]["Event-Time"] }}</span>
+            </span>
+            <span class="eventRow">
+              <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/location.png?13412379145347209286"><span>{{ event.metafields["global"]["Event-Location"] }}</span>
+            </span>
+            <span class="link">
+              Learn More ►
+            </span>
+          </span>
+      	</a>
+      {% endfor %}
+      <div class="blockContainer">
+        <a class="endLink" href="https://www.facebook.com/voodooride/">
+          Visit our facebook to stay on top of events, past &amp; present
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+{% schema %}
+{
+ "name": "Legal",
+ "settings": [
+   {
+     "id": "bannerImg",
+     "type": "image_picker",
+     "label": "bannerImg"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="legalPage">
+  <div class="banner">
+    <img src="{{ section.settings.bannerImg | img_url: '1600x' }}">
+    <div class="text">
+      <div class="line"></div>
+      <div class="breadcrumb">
+        HOME
+      </div>
+      <h1>{{ page.title }}</h1>
+    </div>
+  </div>
+  <div class="body">
+    <div class="inner">
+      {{ page.content }}
+    </div>
+  </div>
+</div>

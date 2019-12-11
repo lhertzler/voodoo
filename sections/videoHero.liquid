@@ -1,0 +1,58 @@
+{% schema %}
+{
+ "name": "Hero",
+ "settings": [
+   {
+     "id": "superTitle",
+     "type": "text",
+     "label": "superTitle"
+   },
+   {
+     "id": "title",
+     "type": "text",
+     "label": "title"
+   },
+   {
+     "id": "stickerText",
+     "type": "text",
+     "label": "stickerText"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="homeHeroContainer">
+  <div class="videoContainer">
+    <video autoplay loop muted>
+  		<source src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/Voodoo_Highlights_1.mp4?11822797607347425481" type="video/mp4">
+    </video>
+    <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/ezgif.com-video-to-gif.gif?6509036608983583558">
+  </div>
+  <div class="text">
+    <div class="line"></div>
+    <div class="superTitle">
+      {{ section.settings.superTitle }}
+    </div>
+    <div class="title">
+      {{ section.settings.title }}
+    </div>
+  </div>
+</div>
+<div class="stickerContaier">
+  <div class="sticker">
+    <div class="top">
+      <span>Warning!</span>
+      <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/alert.png?15282778012075372386">
+    </div>
+    <div class="bottom">
+      <div class="left">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/stickerLogo.png?15224161184973250060">
+      </div>
+      <div class="right">
+        <span>
+          {{ section.settings.stickerText }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

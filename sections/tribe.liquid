@@ -1,0 +1,392 @@
+{% schema %}
+{
+ "name": "tribe",
+ "settings": [
+   {
+     "id": "bannerImg",
+     "type": "image_picker",
+     "label": "bannerImg"
+   },
+   {
+     "id": "title",
+     "type": "text",
+     "label": "title"
+   },
+   {
+     "id": "iframeCode",
+     "type": "text",
+     "label": "iframeCode"
+   },
+   {
+     "id": "topBlockTitle",
+     "type": "text",
+     "label": "topBlockTitle"
+   },
+   {
+     "id": "topBlockBody",
+     "type": "text",
+     "label": "topBlockBody"
+   },
+   {
+     "id": "requirementsTitle",
+     "type": "text",
+     "label": "requirementsTitle"
+   },
+   {
+     "id": "requirementsBody",
+     "type": "text",
+     "label": "requirementsBody"
+   },
+   {
+     "id": "requirementImg",
+     "type": "image_picker",
+     "label": "requirementImg"
+   }
+ ],
+ "blocks":[
+   {
+     "type": "tribesmen",
+     "name": "tribesmen",
+     "settings":[
+       {
+         "id": "img",
+         "type": "image_picker",
+         "label": "img"
+       },
+       {
+         "id": "name",
+         "type": "text",
+         "label": "name"
+       },
+       {
+         "id": "yearJoined",
+         "type": "text",
+         "label": "yearJoined"
+       },
+       {
+         "id": "homeTown",
+         "type": "text",
+         "label": "homeTown"
+       },
+       {
+         "id": "instagramLink",
+         "type": "text",
+         "label": "instagramLink"
+       },
+       {
+         "id": "instagramName",
+         "type": "text",
+         "label": "instagramName"
+       }
+     ]
+   }
+ ]
+}
+{% endschema %}
+
+<div class="tribePage">
+  <div class="banner">
+    <img src="{{ section.settings.bannerImg | img_url: '1600x' }}">
+    <div class="text">
+      <div class="line"></div>
+      <div class="breadCrumb">
+        <a href="/">Home</a><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/arrow2.png?5675951094142806782"><span>Events</span>
+      </div>
+      <h1>{{ section.settings.title }}</h1>
+    </div>
+  </div>
+  <div class="topBlock">
+    <div class="inner">
+      <div class="responsiveIframe">
+        {{ section.settings.iframeCode }}
+      </div>
+      <div class="right">
+        <h2>
+          {{ section.settings.topBlockTitle }}
+        </h2>
+        <div class="body">
+          {{ section.settings.topBlockBody }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slideShowContainer">
+    <div class="floatTitle">
+      Featured Tribesmen —
+    </div>
+    <div class="tribeSlide">
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="tribeSlideTab">
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="tribeSlideMob">
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+      {% for block in section.blocks %}
+      {% if block.type == 'tribesmen' %}
+      	<div class="block">
+          <img class="img" src="{{ block.settings.img | img_url: '600x' }}">
+          <div class="name">
+            {{ block.settings.name }}
+          </div>
+          <div class="joined">
+            Joined {{ block.settings.yearJoined }}
+          </div>
+          <div class="home">
+            Hometown: {{ block.settings.homeTown }}
+          </div>
+          <a href="{{ block.settings.instagramLink }}" class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_0b3f8739-aa21-44f6-9da1-0537b8cf85d0.png?14213868204946149886">{{ block.settings.instagramName }}
+          </a>
+      	</div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="secondBlock">
+    <div class="left">
+      <div class="header">
+        {{ section.settings.requirementsTitle }}
+      </div>
+      <div class="body">
+        {{ section.settings.requirementsBody }}
+      </div>
+    </div>
+    <div class="rightImg">
+      <img src="{{ section.settings.requirementImg | img_url: "811x" }}" class="blockImg">
+      <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/Bitmap.png?8495160641585611773" class="floater">
+    </div>
+  </div>
+  <div class="tribeForm">
+    <div class="inner">
+      <!-- Begin Mailchimp Signup Form -->
+      <div id="mc_embed_signup">
+      <form action="https://voodooride.us15.list-manage.com/subscribe/post?u=268b5e2c470989236d34f708a&amp;id=4db6398ff5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <div id="mc_embed_signup_scroll">
+            
+            
+	  <div class="header">
+          Contact Info
+      </div>
+            
+            
+      <div class="halfForm">
+          <input placeholder="Name*" type="text" value="" name="NAME" class="required" id="mce-NAME">
+      </div>
+      <div class="hiddenForm">
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Email*" type="text" value="" name="REALEMAIL" class="required" id="mce-REALEMAIL">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Address*" type="text" value="" maxlength="70" name="MMERGE2[addr1]" id="mce-MMERGE2-addr1" class="">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Apt. or Suite Number*" type="text" value="" maxlength="70" name="MMERGE2[addr2]" id="mce-MMERGE2-addr2">		
+      </div>
+      <div class="thirdForm">
+          <input placeholder="City*" type="text" value="" maxlength="40" name="MMERGE2[city]" id="mce-MMERGE2-city" class="">
+      </div>
+      <div class="thirdForm">
+          <input placeholder="State*" type="text" value="" maxlength="20" name="MMERGE2[state]" id="mce-MMERGE2-state" class="">
+      </div>
+      <div class="thirdForm">
+          <input placeholder="Zip/Postal Code*" type="text" value="" maxlength="10" name="MMERGE2[zip]" id="mce-MMERGE2-zip" class="">
+      </div>
+      <div class="halfForm">
+          <select placeholder="Country*" name="MMERGE2[country]" id="mce-MMERGE2-country" class=""><option value="164" selected>USA</option><option value="286">Aaland Islands</option><option value="274">Afghanistan</option><option value="2">Albania</option><option value="3">Algeria</option><option value="178">American Samoa</option><option value="4">Andorra</option><option value="5">Angola</option><option value="176">Anguilla</option><option value="175">Antigua And Barbuda</option><option value="6">Argentina</option><option value="7">Armenia</option><option value="179">Aruba</option><option value="8">Australia</option><option value="9">Austria</option><option value="10">Azerbaijan</option><option value="11">Bahamas</option><option value="12">Bahrain</option><option value="13">Bangladesh</option><option value="14">Barbados</option><option value="15">Belarus</option><option value="16">Belgium</option><option value="17">Belize</option><option value="18">Benin</option><option value="19">Bermuda</option><option value="20">Bhutan</option><option value="21">Bolivia</option><option value="325">Bonaire, Saint Eustatius and Saba</option><option value="22">Bosnia and Herzegovina</option><option value="23">Botswana</option><option value="181">Bouvet Island</option><option value="24">Brazil</option><option value="180">Brunei Darussalam</option><option value="25">Bulgaria</option><option value="26">Burkina Faso</option><option value="27">Burundi</option><option value="28">Cambodia</option><option value="29">Cameroon</option><option value="30">Canada</option><option value="31">Cape Verde</option><option value="32">Cayman Islands</option><option value="33">Central African Republic</option><option value="34">Chad</option><option value="35">Chile</option><option value="36">China</option><option value="185">Christmas Island</option><option value="37">Colombia</option><option value="204">Comoros</option><option value="38">Congo</option><option value="183">Cook Islands</option><option value="268">Costa Rica</option><option value="275">Cote D'Ivoire</option><option value="40">Croatia</option><option value="276">Cuba</option><option value="298">Curacao</option><option value="41">Cyprus</option><option value="42">Czech Republic</option><option value="318">Democratic Republic of the Congo</option><option value="43">Denmark</option><option value="44">Djibouti</option><option value="289">Dominica</option><option value="187">Dominican Republic</option><option value="45">Ecuador</option><option value="46">Egypt</option><option value="47">El Salvador</option><option value="48">Equatorial Guinea</option><option value="49">Eritrea</option><option value="50">Estonia</option><option value="51">Ethiopia</option><option value="189">Falkland Islands</option><option value="191">Faroe Islands</option><option value="52">Fiji</option><option value="53">Finland</option><option value="54">France</option><option value="193">French Guiana</option><option value="277">French Polynesia</option><option value="56">Gabon</option><option value="57">Gambia</option><option value="58">Georgia</option><option value="59">Germany</option><option value="60">Ghana</option><option value="194">Gibraltar</option><option value="61">Greece</option><option value="195">Greenland</option><option value="192">Grenada</option><option value="196">Guadeloupe</option><option value="62">Guam</option><option value="198">Guatemala</option><option value="270">Guernsey</option><option value="63">Guinea</option><option value="65">Guyana</option><option value="200">Haiti</option><option value="66">Honduras</option><option value="67">Hong Kong</option><option value="68">Hungary</option><option value="69">Iceland</option><option value="70">India</option><option value="71">Indonesia</option><option value="278">Iran</option><option value="279">Iraq</option><option value="74">Ireland</option><option value="323">Isle of Man</option><option value="75">Israel</option><option value="76">Italy</option><option value="202">Jamaica</option><option value="78">Japan</option><option value="288">Jersey  (Channel Islands)</option><option value="79">Jordan</option><option value="80">Kazakhstan</option><option value="81">Kenya</option><option value="203">Kiribati</option><option value="82">Kuwait</option><option value="83">Kyrgyzstan</option><option value="84">Lao People's Democratic Republic</option><option value="85">Latvia</option><option value="86">Lebanon</option><option value="87">Lesotho</option><option value="88">Liberia</option><option value="281">Libya</option><option value="90">Liechtenstein</option><option value="91">Lithuania</option><option value="92">Luxembourg</option><option value="208">Macau</option><option value="93">Macedonia</option><option value="94">Madagascar</option><option value="95">Malawi</option><option value="96">Malaysia</option><option value="97">Maldives</option><option value="98">Mali</option><option value="99">Malta</option><option value="207">Marshall Islands</option><option value="210">Martinique</option><option value="100">Mauritania</option><option value="212">Mauritius</option><option value="241">Mayotte</option><option value="101">Mexico</option><option value="102">Moldova, Republic of</option><option value="103">Monaco</option><option value="104">Mongolia</option><option value="290">Montenegro</option><option value="294">Montserrat</option><option value="105">Morocco</option><option value="106">Mozambique</option><option value="242">Myanmar</option><option value="107">Namibia</option><option value="108">Nepal</option><option value="109">Netherlands</option><option value="110">Netherlands Antilles</option><option value="213">New Caledonia</option><option value="111">New Zealand</option><option value="112">Nicaragua</option><option value="113">Niger</option><option value="114">Nigeria</option><option value="217">Niue</option><option value="214">Norfolk Island</option><option value="272">North Korea</option><option value="116">Norway</option><option value="117">Oman</option><option value="118">Pakistan</option><option value="222">Palau</option><option value="282">Palestine</option><option value="119">Panama</option><option value="219">Papua New Guinea</option><option value="120">Paraguay</option><option value="121">Peru</option><option value="122">Philippines</option><option value="221">Pitcairn</option><option value="123">Poland</option><option value="124">Portugal</option><option value="126">Qatar</option><option value="315">Republic of Kosovo</option><option value="127">Reunion</option><option value="128">Romania</option><option value="129">Russia</option><option value="130">Rwanda</option><option value="205">Saint Kitts and Nevis</option><option value="206">Saint Lucia</option><option value="324">Saint Martin</option><option value="237">Saint Vincent and the Grenadines</option><option value="132">Samoa (Independent)</option><option value="227">San Marino</option><option value="255">Sao Tome and Principe</option><option value="133">Saudi Arabia</option><option value="134">Senegal</option><option value="326">Serbia</option><option value="135">Seychelles</option><option value="136">Sierra Leone</option><option value="137">Singapore</option><option value="302">Sint Maarten</option><option value="138">Slovakia</option><option value="139">Slovenia</option><option value="223">Solomon Islands</option><option value="140">Somalia</option><option value="141">South Africa</option><option value="257">South Georgia and the South Sandwich Islands</option><option value="142">South Korea</option><option value="311">South Sudan</option><option value="143">Spain</option><option value="144">Sri Lanka</option><option value="293">Sudan</option><option value="146">Suriname</option><option value="225">Svalbard and Jan Mayen Islands</option><option value="147">Swaziland</option><option value="148">Sweden</option><option value="149">Switzerland</option><option value="285">Syria</option><option value="152">Taiwan</option><option value="260">Tajikistan</option><option value="153">Tanzania</option><option value="154">Thailand</option><option value="233">Timor-Leste</option><option value="155">Togo</option><option value="232">Tonga</option><option value="234">Trinidad and Tobago</option><option value="156">Tunisia</option><option value="157">Turkey</option><option value="158">Turkmenistan</option><option value="287">Turks &amp; Caicos Islands</option><option value="159">Uganda</option><option value="161">Ukraine</option><option value="162">United Arab Emirates</option><option value="262">United Kingdom</option><option value="163">Uruguay</option><option value="165">Uzbekistan</option><option value="239">Vanuatu</option><option value="166">Vatican City State (Holy See)</option><option value="167">Venezuela</option><option value="168">Vietnam</option><option value="169">Virgin Islands (British)</option><option value="238">Virgin Islands (U.S.)</option><option value="188">Western Sahara</option><option value="170">Yemen</option><option value="173">Zambia</option><option value="174">Zimbabwe</option></select>
+      </div>
+      <div class="halfForm">
+          <input placeholder="Company" type="text" value="" name="COMPANY" class="required" id="mce-COMPANY">
+      </div>
+            
+      <div class="header lessPadding">
+          Vehicle Information
+      </div>
+            
+      <div class="halfForm">
+          <input placeholder="Year*" type="number" name="YEAR" class="required" value="" id="mce-YEAR">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Make*" type="text" value="" name="MAKE" class="required" id="mce-MAKE">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Model*" type="text" value="" name="MODEL" class="required" id="mce-MODEL">
+      </div>
+      <div class="halfForm">
+          <input placeholder="Owner's Name*" type="text" value="" name="OWNER" class="required" id="mce-OWNER">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="Current Modifications*"></textarea>
+          <input type="text" value="" name="CURRENTMOD" class="required" id="mce-CURRENTMOD">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="Planned Modifications*"></textarea>
+          <input type="text" value="" name="PLANNEDMOD" class="required" id="mce-PLANNEDMOD">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="Do you have any current sponsors? if so, please list them.*"></textarea>
+          <input type="text" value="" name="CURRENTSPO" class="required" id="mce-CURRENTSPO">
+      </div>
+      <div class="photoUpload">
+          <span class="instruction">Vehicle Photo (JPG only, Max. 15MB)*</span>
+          <div class="uploadRow">
+            <div class="uploadButton">Choose File</div><span class="fileBoolean">No file chosen</span>
+          </div>
+          <input type="url" value="" name="CARPIC" class="required url" id="mce-CARPIC">
+      </div>
+      <div class="photoUpload">
+          <span class="instruction">Additional Photo (JPG only, Max. 15MB)*</span>
+          <div class="uploadRow">
+            <div class="uploadButton">Choose File</div><span class="fileBoolean">No file chosen</span>
+          </div>
+          <input type="url" value="" name="ADDITIONAL" class="required url" id="mce-ADDITIONAL">
+      </div>
+      <div class="photoUpload">
+          <span class="instruction">Additional Photo (JPG only, Max. 15MB)*</span>
+          <div class="uploadRow">
+            <div class="uploadButton">Choose File</div><span class="fileBoolean">No file chosen</span>
+          </div>
+          <input type="url" value="" name="ADDITION2" class="required url" id="mce-ADDITION2">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="Please list all events, shows and exhibits currently scheduled and registered for*"></textarea>
+          <input type="text" value="" name="EVENTS" class="required" id="mce-EVENTS">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="What are your social media plans?*"></textarea>
+          <input type="text" value="" name="SOCIALPLAN" class="required" id="mce-SOCIALPLAN">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="What are your current social media accounts and followers as of today?*"></textarea>
+          <input type="text" value="" name="NOWSOCIAL" class="required" id="mce-NOWSOCIAL">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="What top 5 automotive related social media accounts do you follow?*"></textarea>
+          <input type="text" value="" name="FOLLOW" class="required" id="mce-FOLLOW">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="What else can you tell us about yourself?*"></textarea>
+          <input type="text" value="" name="ABOUT" class="required" id="mce-ABOUT">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="Why should we sponsor you?*"></textarea>
+          <input type="text" value="" name="WHY" class="required" id="mce-WHY">
+      </div>
+      <div class="pairedTextField">
+          <textarea placeholder="How do you plan on promoting our brand?*"></textarea>
+          <input type="text" value="" name="HOWPROMO" class="required" id="mce-HOWPROMO">
+      </div>
+      <div class="fileUpload">
+          <span class="instruction">Optional Sponsorship Proposal File Upload (can be .doc, jpeg, pdf, Max. 15MB)</span>
+          <div class="uploadRow">
+            <div class="uploadButton">Choose File</div><span class="fileBoolean">No file chosen</span>
+          </div>
+          <input type="text" value="" name="PROPOSAL" class="" id="mce-PROPOSAL">
+      </div>
+          
+       <input disabled="disabled" type="submit" value="Submit" name="Submit" id="mc-embedded-subscribe" class="formSubmit button"></div>
+         <div id="mce-responses" class="clear">
+              <div class="response" id="mce-error-response" style="display:none"></div>
+              <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_268b5e2c470989236d34f708a_4db6398ff5" tabindex="-1" value=""></div>
+      </form>
+      </div>
+      <!--End mc_embed_signup-->
+    </div>
+  </div>
+</div>

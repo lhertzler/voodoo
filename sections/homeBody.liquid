@@ -1,0 +1,175 @@
+{% schema %}
+{
+ "name": "Body",
+ "settings": [
+   {
+     "id": "bubbles",
+     "type": "image_picker",
+     "label": "bubbles"
+   },
+   {
+     "id": "followSkull",
+     "type": "image_picker",
+     "label": "followSkull"
+   },
+   {
+     "id": "arrow",
+     "type": "image_picker",
+     "label": "arrow"
+   },
+   {
+     "id": "superTitle",
+     "type": "text",
+     "label": "superTitle"
+   },
+   {
+     "id": "title",
+     "type": "text",
+     "label": "title"
+   },
+   {
+     "id": "body",
+     "type": "textarea",
+     "label": "body"
+   },
+   {
+     "id": "buttonLink",
+     "type": "text",
+     "label": "buttonLink"
+   },
+   {
+     "id": "buttonText",
+     "type": "text",
+     "label": "buttonText"
+   }
+ ],
+ "blocks":[
+   {
+     "type": "slide",
+     "name": "slide",
+     "settings":[
+       {
+         "id": "link",
+         "type": "url",
+         "label": "link"
+       },
+       {
+         "id": "img",
+         "type": "image_picker",
+         "label": "img"
+       },
+       {
+         "id": "title",
+         "type": "text",
+         "label": "title"
+       }
+     ]
+   }
+ ]
+}
+{% endschema %}
+
+<div class="homeBodySection">
+  <div class="bottomBubbles">
+    <img src="{{ section.settings.bubbles | img_url:'1800x' }}">
+  </div>
+  <div class="skullContainer">
+    <div class="followSkull">
+      <img src="{{ section.settings.followSkull | img_url: '1300x' }}">
+    </div>
+  </div>
+  <div class="slideContainer">
+    <div class="homeBodySlide">
+      {% for block in section.blocks %}
+      {% if block.type == 'slide' %}
+      	<div class="slideBlock">
+          <a href="{{ block.settings.link }}">
+            <img src="{{ block.settings.img | img_url: '600x' }}">
+			<span>
+              {{ block.settings.title }}
+            </span>
+          </a>
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="homeBodySlideTab">
+      {% for block in section.blocks %}
+      {% if block.type == 'slide' %}
+      	<div class="slideBlock">
+          <a href="{{ block.settings.link }}">
+            <img src="{{ block.settings.img | img_url: '600x' }}">
+			<span>
+              {{ block.settings.title }}
+            </span>
+          </a>
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    <div class="homeBodySlideMob">
+      {% for block in section.blocks %}
+      {% if block.type == 'slide' %}
+      	<div class="slideBlock">
+          <a href="{{ block.settings.link }}">
+            <img src="{{ block.settings.img | img_url: '600x' }}">
+			<span>
+              {{ block.settings.title }}
+            </span>
+          </a>
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="slideInBlock">
+    <div class="leftSlideContainer">
+      <div class="prod1">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod1.png?4419898894700808621">
+      </div>
+      <div class="prod2">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod2.png?4419898894700808621">
+      </div>
+      <div class="prod3">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod3.png?4419898894700808621">
+      </div>
+      <div class="prod4">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod4.png?4419898894700808621">
+      </div>
+      <div class="prod5">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod5.png?4419898894700808621">
+      </div>
+      <div class="prod6">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod6.png?4419898894700808621">
+      </div>
+      <div class="prod7">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod7.png?4419898894700808621">
+      </div>
+      <div class="prod8">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod8.png?4419898894700808621">
+      </div>
+      <div class="prod9">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/prod9.png?4419898894700808621">
+      </div>
+    </div>
+    <div class="textBlock">
+      <div class="arrow">
+        <img src="{{ section.settings.arrow | img_url: '900x' }}">
+      </div>
+      <div class="inner">
+        <div class="superTitle">
+          {{ section.settings.superTitle }}
+        </div>
+        <div class="title">
+          {{ section.settings.title }}
+        </div>
+        <div class="body">
+          {{ section.settings.body }}
+        </div>
+        <a href="{{ section.settings.buttonLink }}">
+          {{ section.settings.buttonText }} —
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

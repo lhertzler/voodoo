@@ -1,0 +1,158 @@
+{% schema %}
+{
+ "name": "Home Footer",
+ "settings": [
+   {
+     "id": "followSkull",
+     "type": "image_picker",
+     "label": "followSkull"
+   },
+   {
+     "id": "background",
+     "type": "image_picker",
+     "label": "background"
+   },
+   {
+     "id": "signupHead",
+     "type": "text",
+     "label": "signupHead"
+   },
+   {
+     "id": "signupBody",
+     "type": "text",
+     "label": "signupBody"
+   },
+   {
+     "id": "instagramUrl",
+     "type": "url",
+     "label": "instagramUrl"
+   },
+   {
+     "id": "faceBookUrl",
+     "type": "url",
+     "label": "faceBookUrl"
+   },
+   {
+     "id": "twitterUrl",
+     "type": "url",
+     "label": "twitterUrl"
+   },
+   {
+     "id": "youtubeUrl",
+     "type": "url",
+     "label": "youtubeUrl"
+   },
+   {
+     "id": "privacyNotice",
+     "type": "url",
+     "label": "privacyNotice"
+   },
+   {
+     "id": "termsAndConditions",
+     "type": "url",
+     "label": "termsAndConditions"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="homeFooter">
+  <div class="skullContainer">
+    <div class="followSkull">
+      <img src="{{section.settings.followSkull | img_url: '1500x' }}">
+    </div>
+  </div>
+  <div class="inner" style="background-image:url({{ section.settings.background | img_url: '1600x' }})">
+    <div class="upper">
+      <div class="title">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/footerinsta.png?9822172850374128345">
+        <span>@VOODOORIDE —</span>
+      </div>
+  	  <div class="instaGallery" id="insta-feed"></div>
+    </div>
+    <div class="mid">
+      <div class="signupText">
+        <div class="header">
+          {{ section.settings.signupHead }}
+        </div>
+        <div class="body">
+          {{ section.settings.signupBody }}
+        </div>
+        <div class="signup">
+          <!-- Begin Mailchimp Signup Form -->
+            <div id="mc_embed_signup">
+            <form action="https://voodooride.us15.list-manage.com/subscribe/post?u=268b5e2c470989236d34f708a&amp;id=c96f754aa0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+
+            <div class="mc-field-group">
+                <label for="mce-EMAIL"></label>
+                <input type="email" placeholder="Enter email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+            </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_268b5e2c470989236d34f708a_c96f754aa0" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="SIGN UP" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+		  <!--End mc_embed_signup-->
+        </div>
+      </div>
+      <div class="socialMediaFlex">
+      <a target="_blank" href="{{ section.settings.instagramUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta_29c77b02-727c-4049-9f42-28ec4b09da5a.png?12849629932494171271">
+      </a>
+      <a target="_blank" href="{{ section.settings.faceBookUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/facebook.png?12849629932494171271">
+      </a>
+      <a target="_blank" href="{{ section.settings.twitterUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/twitter_0b1e6bfb-0536-40c3-b645-2e80ec67c526.png?12849629932494171271">
+      </a>
+      <a target="_blank" href="{{ section.settings.youtubeUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/youtube_347f3ef9-e735-41aa-92a2-41e42ed8b489.png?12849629932494171271">
+      </a>
+    </div>
+    </div>
+    <div class="lower">
+      {% for link in linklists.footermenu.links %}
+        <div class="block">
+          <div class="header">
+            {{ link.title }}
+          </div>
+          {% for child in link.links %}
+            <a href="{{ child.url }}">
+              {{ child.title }}
+            </a>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+<div class="legalBlock">
+  <div class="inner">
+    <div class="left">
+      <a href="{{ section.settings.privacyNotice }}">
+        Privacy Notice
+      </a>
+      |
+      <a href="{{ section.settings.termsAndConditions }}">
+        Terms &amp; Conditions
+      </a>
+    </div>
+    <div class="center">
+      Copyright ©
+      <script type="text/javascript">
+      var today = new Date();
+      var year = today.getFullYear();
+      document.write(year);
+      </script>
+      Voodoo Ride All Rights Reserved.
+    </div>
+    <div class="right">
+      Contact
+    </div>
+  </div>
+</div>

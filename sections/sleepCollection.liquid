@@ -1,0 +1,353 @@
+{% schema %}
+{
+ "name": "collection",
+ "settings": [
+   {
+     "id": "bannerBackground",
+     "type": "image_picker",
+     "label": "bannerBackground"
+   },
+   {
+     "id": "title",
+     "type": "text",
+     "label": "title"
+   },
+   {
+     "id": "blockLink",
+     "type": "text",
+     "label": "blockLink"
+   },
+   {
+     "id": "blockBackground",
+     "type": "image_picker",
+     "label": "blockBackground"
+   },
+   {
+     "id": "blockText",
+     "type": "text",
+     "label": "blockText"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="collectionPage">
+  <div class="banner">
+    <img src="{{ section.settings.bannerBackground | img_url: '1600x' }}">
+    <div class="text">
+      <div class="line"></div>
+      <div class="breadCrumb">
+        <a href="/">Home</a><img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/arrow2.png?5675951094142806782"><span>Products</span>
+      </div>
+      <h1>{{ section.settings.title }}</h1>
+    </div>
+  </div>
+  {% assign totalCount = 0 %}
+  
+  {% for product in collections['car-care'].products %}
+  {% assign totalCount = totalCount | plus: 1 %}
+  {% endfor %}
+  
+  {% assign product = collections['car-care'].products %}
+  {% assign remainder = totalCount | modulo: 4 %}
+  {% assign fullItems = totalCount | minus: remainder %}
+  {% assign fullRow = fullItems | divided_by: 4 %}
+  {% assign halfRow = fullRow | times: 2 %}
+  {% assign currentItem = 0 %}
+  
+  <div class="carCare">
+    <div class="bigtitle">
+      <span>
+      Car Care —
+      </span>
+    </div>
+    {% for row in (1..fullRow) %}
+    <div class="row">
+      {% for subRow in (1..2) %}
+        <div class="subRow">
+          {% for item in (1..2) %}
+            <a class="prod" href="{{ product[currentItem].url }}">
+              <img style="color:#{{ product[currentItem].featured_image.alt }};" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  {{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% if remainder > 0 %}
+      <div class="row endRow">
+        {% if remainder == 1 %}
+        <div class="miniRow">
+          <a class="prod" href="{{ product[currentItem].url }}">
+              <img style="color:#{{ product[currentItem].featured_image.alt }};" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        <a class="threeQuarterRowImg" href="{{ section.settings.blockLink }}">
+          <img src="{{ section.settings.blockBackground | img_url: '1600x' }}">
+          <span class="text">
+            {{ section.settings.blockText }}
+          </span>
+        </a>
+		{% elsif remainder == 2 %}
+        <div class="subRow">
+          <a class="prod" href="{{ product[currentItem].url }}">
+              <img style="color:#{{ product[currentItem].featured_image.alt }};" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        <a class="halfRowImg" href="{{ section.settings.blockLink }}">
+          <img src="{{ section.settings.blockBackground | img_url: '1600x' }}">
+          <span class="text">
+            {{ section.settings.blockText }}
+          </span>
+        </a>
+        {% elsif remainder == 3 %}
+        <div class="subRow">
+          <a class="prod" href="{{ product[currentItem].url }}">
+              <img style="color:#{{ product[currentItem].featured_image.alt }};" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        <div class="miniRow">
+          <a class="prod" href="{{ product[currentItem].url }}">
+              <img style="color:#{{ product[currentItem].featured_image.alt }};" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        <a class="quarterRowImg" href="{{ section.settings.blockLink }}">
+          <img src="{{ section.settings.blockBackground | img_url: '1600x' }}">
+          <span class="text">
+            {{ section.settings.blockText }}
+          </span>
+        </a>
+        {% endif %}
+      </div>
+    {% else %}
+    <a class="fullRowImg" href="{{ section.settings.blockLink }}">
+      <img src="{{ section.settings.blockBackground | img_url: '1600x' }}">
+      <span class="text">
+        {{ section.settings.blockText }}
+      </span>
+    </a>
+    {% endif %}
+  </div>
+  
+  {% assign totalCount = 0 %}
+  
+  {% for product in collections['merchandise'].products %}
+  {% assign totalCount = totalCount | plus: 1 %}
+  {% endfor %}
+  
+  {% assign product = collections['merchandise'].products %}
+  {% assign remainder = totalCount | modulo: 4 %}
+  {% assign fullItems = totalCount | minus: remainder %}
+  {% assign fullRow = fullItems | divided_by: 4 %}
+  {% assign halfRow = fullRow | times: 2 %}
+  {% assign currentItem = 0 %}
+  
+  <div class="merch">
+    <div class="bigtitle">
+      <span>
+      Merchandise —
+      </span>
+    </div>
+    {% for row in (1..fullRow) %}
+    <div class="row">
+      {% for subRow in (1..2) %}
+        <div class="subRow">
+          {% for item in (1..2) %}
+            <a class="prod" href="{{ product[currentItem].title }}">
+              <img style="color:transparent;" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+    {% if remainder > 0 %}
+      <div class="row">
+        {% if remainder == 1 %}
+        <div class="miniRow">
+          <a class="prod" href="{{ product[currentItem].title }}">
+              <img style="color:transparent;" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+		{% elsif remainder == 2 %}
+        <div class="subRow">
+          <a class="prod" href="{{ product[currentItem].title }}">
+              <img style="color:transparent;" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        {% elsif remainder == 3 %}
+        <div class="subRow">
+          <a class="prod" href="{{ product[currentItem].title }}">
+              <img style="color:transparent;" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        <div class="miniRow">
+          <a class="prod" href="{{ product[currentItem].title }}">
+              <img style="color:transparent;" src="{{ product[currentItem].featured_image | img_url: '700x' }}">
+              <span class="numRow">
+                <span class="price">
+                  ${{ product[currentItem].price | money_without_currency }}
+                </span>
+                <span class="bar">
+                  {{ product[currentItem].variants[0].barcode }}
+                </span>
+              </span>
+              <span class="title">
+                {{ product[currentItem].title }}
+              </span>
+              <span class="button">
+                <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?5675951094142806782">
+                <span>View Product</span>
+              </span>
+            </a>
+          {% assign currentItem = currentItem | plus: 1 %}
+        </div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>

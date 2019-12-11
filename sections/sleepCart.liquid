@@ -1,0 +1,64 @@
+<div class="cartPage">
+  <div class="inner">
+    <div class="left">
+      <div class="title">
+        My cart
+      </div>
+      <div class="count">
+        {% assign count = 0 %}
+        {% for item in cart.items %}
+        {% assign count = count | plus: 1 %}
+        {% endfor %}
+        {{ count }} Items
+      </div>
+      <div class="products">
+        {% if count == 0 %}
+        <span class="empty">
+          Your cart is empty.
+        </span>
+        {% else %}
+          {% for item in cart.items %}
+        	<div class="block">
+              <img src="{{ item | img_url: '220x' }}">
+              <div class="text">
+                <div class="header">
+                  {{ item.title }}
+                </div>
+                <div class="price">
+                  ${{ item.price | money_without_currency }}
+                </div>
+                <input class="cartQuantity" type="number" min="1" value="{{ item.quantity }}">
+                <div class="cartRemove" data-num="{{ item.variant_id }}">
+                  Remove
+                </div>
+              </div>
+        	</div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+    <div class="right">
+      <div class="summary">
+        <div class="header">
+          Order Summary
+        </div>
+        <div class="summaryRow">
+          <span class="bold">Subtotal:</span>
+          <span class="price">
+            ${{ cart.total_price | money_without_currency }}
+          </span>
+        </div>
+        <a href="/checkout" class="checkout">
+          <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?11527305430829080444">
+          <span>Proceed to checkout</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="mobileCheckout">
+    <a href="/checkout" class="checkout">
+      <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/checkout.png?11527305430829080444">
+      <span>Proceed to checkout</span>
+    </a>
+  </div>
+</div>

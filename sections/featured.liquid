@@ -1,0 +1,129 @@
+{% schema %}
+{
+ "name": "Featured",
+ "settings": [
+   {
+     "id": "backgroundImage",
+     "type": "image_picker",
+     "label": "backgroundImage"
+   },
+   {
+     "id": "featuredTitle",
+     "type": "text",
+     "label": "featuredTitle"
+   },
+   {
+     "id": "bestSeller",
+     "type": "product",
+     "label": "bestSeller"
+   },
+   {
+     "id": "featuredProd1",
+     "type": "product",
+     "label": "featuredProd1"
+   },
+   {
+     "id": "featuredProd2",
+     "type": "product",
+     "label": "featuredProd2"
+   },
+   {
+     "id": "allProdLink",
+     "type": "url",
+     "label": "allProdLink"
+   }
+ ]
+}
+{% endschema %}
+
+<div class="homeFeaturedSection" style="background-image:url({{ section.settings.backgroundImage | img_url:'1600x' }})">
+  <div class="interior">
+    <div class="title">
+      {{ section.settings.featuredTitle }} —
+    </div>
+    <div class="left">
+      {% assign _product = all_products[section.settings.bestSeller] %}
+      <div class="img">
+        <img style="color:#{{ _product.featured_image.alt }};" src="{{ _product.featured_image | img_url: '800x' }}">
+      </div>
+      <div class="text">
+        <div class="bestSeller">
+          Best Seller!
+        </div>
+        <div class="line"></div>
+        <div class="prodRow">
+          <div class="price">
+            ${{ _product.price | money_without_currency }}
+          </div>
+          <div class="code">
+            {{ _product.variants[0].barcode }}
+          </div>
+        </div>
+        <div class="header">
+          {{ _product.title }}
+        </div>
+        <div class="desc">
+          {% assign desc = _product.description | split: '—' %}
+          {{ desc[0] }}
+        </div>
+        <div class="button">
+          <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/buttonBkg.png?6010977967374065174">
+          <a href="{{ _product.url }}">
+            View Product
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="block">
+        {% assign _product = all_products[section.settings.featuredProd1] %}
+        <div class="img">
+          <img style="color:#{{ _product.featured_image.alt }};" src="{{ _product.featured_image | img_url: '800x' }}">
+        </div>
+        <div class="podRow">
+          <div class="price">
+            ${{ _product.price | money_without_currency }}
+          </div>
+          <div class="code">
+            {{ _product.variants[0].barcode }}
+          </div>
+        </div>
+        <div class="header">
+          {{ _product.title }}
+        </div>
+        <div class="button">
+          <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/buttonBkg.png?6010977967374065174">
+          <a href="{{ _product.url }}">
+            View Product
+          </a>
+        </div>
+      </div>
+      <div class="block">
+        {% assign _product = all_products[section.settings.featuredProd2] %}
+        <div class="img">
+          <img style="color:#{{ _product.featured_image.alt }};" src="{{ _product.featured_image | img_url: '800x' }}">
+        </div>
+        <div class="podRow">
+          <div class="price">
+            ${{ _product.price | money_without_currency }}
+          </div>
+          <div class="code">
+            {{ _product.variants[0].barcode }}
+          </div>
+        </div>
+        <div class="header">
+          {{ _product.title }}
+        </div>
+        <div class="button">
+          <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/buttonBkg.png?6010977967374065174">
+          <a href="{{ _product.url }}">
+            View Product
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="viewAll" href="{{ section.settings.allProdLink }}">
+    View All Voodoo ride products —
+  </a>
+</div>

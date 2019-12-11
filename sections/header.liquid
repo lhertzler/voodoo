@@ -1,0 +1,243 @@
+{% schema %}
+{
+ "name": "Header",
+ "settings": [
+   {
+     "id": "shippingPrice",
+     "type": "text",
+     "label": "shippingPrice"
+   },
+   {
+     "id": "logo",
+     "type": "image_picker",
+     "label": "logo"
+   },
+   {
+     "id": "locatorLink",
+     "type": "text",
+     "label": "locatorLink"
+   },
+   {
+     "id": "locatorIcon",
+     "type": "image_picker",
+     "label": "locatorIcon"
+   },
+   {
+     "id": "cartIcon",
+     "type": "image_picker",
+     "label": "cartIcon"
+   },
+   {
+     "id": "emptyImg",
+     "type": "image_picker",
+     "label": "emptyImg"
+   },
+   {
+     "id": "dropImgBkg",
+     "type": "image_picker",
+     "label": "dropImgBkg"
+   },
+   {
+     "id": "productLink",
+     "type": "url",
+     "label": "productLink"
+   },
+   {
+     "id": "storeLink",
+     "type": "url",
+     "label": "storeLink"
+   },
+   {
+     "id": "eventsLink",
+     "type": "url",
+     "label": "eventsLink"
+   },
+   {
+     "id": "blogLink",
+     "type": "url",
+     "label": "blogLink"
+   },
+   {
+     "id": "sponsorshipLink",
+     "type": "url",
+     "label": "sponsorshipLink"
+   },
+   {
+     "id": "aboutLink",
+     "type": "url",
+     "label": "aboutLink"
+   },
+   {
+     "id": "phoneNumber",
+     "type": "text",
+     "label": "phoneNumber"
+   },
+   {
+     "id": "email",
+     "type": "text",
+     "label": "email"
+   },
+   {
+     "id": "instagramUrl",
+     "type": "url",
+     "label": "instagramUrl"
+   },
+   {
+     "id": "faceBookUrl",
+     "type": "url",
+     "label": "faceBookUrl"
+   },
+   {
+     "id": "twitterUrl",
+     "type": "url",
+     "label": "twitterUrl"
+   },
+   {
+     "id": "youtubeUrl",
+     "type": "url",
+     "label": "youtubeUrl"
+   }
+ ]
+}
+{% endschema %}
+
+<h1 style="position:absolute;opacity:0;z-index:-10;">Voodoo Ride</h1>
+<div class="shippingBar">
+  <span>|</span>
+  Free Shipping on any order over ${{ section.settings.shippingPrice }}
+  <span>|</span>
+</div>
+<div class="navBar">
+  <div class="inner">
+    <a href="/" class="logo">
+      <img src="{{ section.settings.logo | img_url:'800x' }}" alt="voodoo ride logo">
+    </a>
+    <a href="/" class="mobLogo">
+      <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/logo_119d00ff-0f50-4c41-9997-defdbd148cfa.png?8775291530640417794" alt="voodoo ride logo">
+    </a>
+    <div class="controls">
+      {% comment %}
+      <a class="locator" href="{{ section.settings.locatorLink }}">
+        <img src="{{ section.settings.locatorIcon | img_url:'200x' }}">
+      </a>
+      {% endcomment %}
+      <div class="cartOpen cartIcon">
+        <img src="{{ section.settings.cartIcon | img_url:'200x' }}">
+        <div style="display:none;" class="cartBubble">
+
+        </div>
+      </div>
+      <div class="burgerIcon">
+        <div class="topBar">
+        	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/topR.png?1653935293538183576">
+        </div>
+        <div class="midBar">
+        	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/midR.png?1653935293538183576">
+        </div>
+        <div class="bottomBar">
+        	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/bottomR.png?1653935293538183576">
+        </div>
+        <div class="shortX">
+        	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/topR.png?1653935293538183576">
+        </div>
+        <div class="longX">
+        	<img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/midR.png?1653935293538183576">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="popupCart" style="display:none;">
+  <div class="inner">
+    <div class="title">
+      My Cart
+    </div>
+    <div class="cartClose cartIcon">
+        <img src="{{ section.settings.cartIcon | img_url:'200x' }}">
+        <div style="display:none;" class="cartBubble">
+
+        </div>
+      </div>
+    <div class="itemCont">
+      <div class="empty">
+        <img src="{{ section.settings.emptyImg | img_url: '800x' }}">
+        <span>Your Cart Is Empty</span>
+      </div>
+    </div>
+    <div class="subRow">
+      Subtotal $<span class="subtotalPrice"></span>
+    </div>
+    <a class="checkout" href="/cart">
+      Checkout
+    </a>
+  </div>
+</div>
+<div class="dropNav">
+  <div class="background" style="display:none;">
+    <img src="{{ section.settings.dropImgBkg | img_url: '1000x' }}">
+  </div>
+  <div class="navRow" style="display:none;">
+    <a href="{{ section.settings.productLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'products' %}
+      </icon>
+      <span>Products</span>
+    </a>
+    {% comment %}
+    <a href="{{ section.settings.storeLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'storeLocator' %}
+      </icon>
+      <span>Store Locator</span>
+    </a>
+    {% endcomment %}
+    <a href="{{ section.settings.eventsLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'events' %}
+      </icon>
+      <span>Events</span>
+    </a>
+    {% comment %}
+    <a href="{{ section.settings.blogLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'blog' %}
+      </icon>
+      <span>Blog</span>
+    </a>
+    {% endcomment %}
+    <a href="{{ section.settings.sponsorshipLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'sponsorship' %}
+      </icon>
+      <span>Sponsorship</span>
+    </a>
+    <a href="{{ section.settings.aboutLink }}">
+      <icon>
+        {% include 'svg-icons', name: 'about' %}
+      </icon>
+      <span>About</span>
+    </a>
+  </div>
+  <div class="contactInfo" style="display:none;">
+    <div class="phone">
+      <a href="tel:{{ section.settings.phoneNumber }}">{{ section.settings.phoneNumber }}</a>
+    </div>
+    <div class="email">
+      <a href="mail-to:{{ section.settings.email }}">{{ section.settings.email }}</a>
+    </div>
+    <div class="socialMediaFlex">
+      <a target="_blank" href="{{ section.settings.instagramUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/insta.png?9798612084616450725">
+      </a>
+      <a target="_blank" href="{{ section.settings.faceBookUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/face.png?9798612084616450725">
+      </a>
+      <a target="_blank" href="{{ section.settings.twitterUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/twitter.png?9798612084616450725">
+      </a>
+      <a target="_blank" href="{{ section.settings.youtubeUrl }}">
+        <img src="https://cdn.shopify.com/s/files/1/0046/8326/8165/files/youtube.png?9798612084616450725">
+      </a>
+    </div>
+  </div>
+</div>
